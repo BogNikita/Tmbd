@@ -36,6 +36,7 @@ const Component = () => {
       <List component="nav" aria-label="Sort Results By" sx={{ bgcolor: 'background.paper' }}>
         <ListItem
           ref={ref}
+          button
           id="lock-button"
           aria-haspopup="listbox"
           aria-controls="lock-menu"
