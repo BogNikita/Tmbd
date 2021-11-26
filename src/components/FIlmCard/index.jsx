@@ -14,6 +14,8 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import { addToFavoriteList, removeFromFavoriteList } from '../../effects/favorite/favoriteSlice';
 import { useStyle } from './style';
 
+const url = process.env.NEXT_PUBLIC_BASE_URL;
+
 const Component = ({ title, rait, year, id, src, isFavorite }) => {
   const dispatch = useDispatch();
   const styles = useStyle();
@@ -27,7 +29,7 @@ const Component = ({ title, rait, year, id, src, isFavorite }) => {
   };
 
   const handleOpenNewTab = () => {
-    const link = `https://www.themoviedb.org/movie/${id}`;
+    const link = `${url}/movie/${id}`;
     window.open(link, '_blank');
   };
 
@@ -44,7 +46,7 @@ const Component = ({ title, rait, year, id, src, isFavorite }) => {
           <CardMedia
             component="img"
             height="140"
-            image={`https://www.themoviedb.org/t/p/w220_and_h330_face/${src}`}
+            image={`${url}/t/p/w220_and_h330_face/${src}`}
             alt={title}
           />
         ) : (

@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@mui/styles';
 import CircularProgress from '@mui/material/CircularProgress';
 
-const useStyle = makeStyles((theme) => ({
+const useStyle = makeStyles(() => ({
   wrapper: {
     height: '80vh',
     width: '100%',
