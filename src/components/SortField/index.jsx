@@ -26,9 +26,9 @@ const Component = () => {
   const dispatch = useDispatch();
 
   const handleMenuItemClick = (index) => {
-    dispatch(setSortBy(options[index].key));
     setSelectedIndex(index);
     setIsOpen(false);
+    dispatch(setSortBy(options[index].key));
   };
 
   return (
@@ -36,7 +36,6 @@ const Component = () => {
       <List component="nav" aria-label="Sort Results By" sx={{ bgcolor: 'background.paper' }}>
         <ListItem
           ref={ref}
-          button
           id="lock-button"
           aria-haspopup="listbox"
           aria-controls="lock-menu"
